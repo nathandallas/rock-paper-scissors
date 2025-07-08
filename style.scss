@@ -1,7 +1,27 @@
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+@mixin phone {
+  @media screen and (max-width: #{$tablet-breakpoint - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -14,6 +34,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,13 +51,21 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.4rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: 3.2rem;
+  }
 }
 
-h1 {
-  font-size: 3.2em;
+h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
   line-height: 1.1;
   text-align: center;
 }
@@ -39,24 +75,29 @@ section {
   margin: 0 auto;
 }
 
-#stats {
+.stats {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  & h3 {
+  & h4 {
     font-size: 1.5em;
   }
 }
 
-.stats {
-  display: flex;
+#stats {
+  display: none;
   gap: 2rem;
   text-align: center;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .player {
-  width: 250px;
+  @include tablet() {
+    width: 250px;
+  }
 }
 
 .ratio {
@@ -65,25 +106,47 @@ section {
 }
 
 .choices {
-  max-width: 600px;
   display: flex;
-  gap: 2rem;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
   & button {
     font-size: 1.5rem;
-    line-height: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 600;
     background-color: #646cff60;
     border: 2px solid #646cff;
-    padding: 3rem 4rem;
+    max-width: 50%;
+    padding: 1.5rem;
+    margin: 1rem auto;
     border-radius: 2rem;
+    @include tablet {
+      padding: 1rem;
+    }
+    @include desktop {
+      padding: 3rem 4rem;
+    }
     &:hover {
       background-color: #646cff;
     }
     & img {
-      margin: 1rem;
+      width: 4em;
+      height: 4em;
+      @include tablet {
+        width: 5em;
+        height: 5em;
+      }
     }
+  }
+
+  @include tablet {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-evenly;
+
+    text-align: center;
+  }
+  @include desktop {
+    gap: 2rem;
   }
 }
 
@@ -121,15 +184,19 @@ img {
 }
 
 footer {
+  display: none;
   text-align: center;
-  max-width: 800px;
+
   margin: 0 auto;
+  @include tablet {
+    display: block;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #ceebef;
   }
   a:hover {
     color: #747bff;

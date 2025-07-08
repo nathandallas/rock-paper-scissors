@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -12,44 +15,44 @@
     </header>
 
     <section id="stats">
-      <h3 class="rounds">Round 1</h3>
+      <h4 class="rounds">Round 1</h4>
       <div class="stats">
         <div class="player">
-          <h2 class="player--name">You</h2>
-          <h2 class="player--choice">?</h2>
+          <h3 class="player--name">You</h3>
+          <h3 class="player--choice">?</h3>
         </div>
         <div class="ratio">
-          <h2 id="player-score">0</h2>
-          <h2>:</h2>
-          <h2 id="computer-score">0</h2>
+          <h3 id="player-score" class="mobile">0</h3>
+          <h3>:</h3>
+          <h3 id="computer-score" class="mobile">0</h3>
         </div>
         <div class="player">
-          <h2 class="player--name">Computer</h2>
-          <h2 class="computer--choice">?</h2>
+          <h3 class="player--name">Computer</h3>
+          <h3 class="computer--choice">?</h3>
         </div>
       </div>
       <p>First to 5 Wins!</p>
     </section>
 
     <section class="results">
-      <h2 class="round-results"></h2>
+      <h3 class="round-results"></h3>
       <button id="replay" class="hide">Play Again?</button>
     </section>
 
     <section id="choice">
-      <h1>Choose Your Weapon</h1>
+      <h2>Choose Your Weapon</h2>
       <div class="choices">
         <button class="choice" id="Rock">
           Rock
-          <img id="Rock" src="./public/rock.png" alt="rock" />
+          <img id="Rock" src="/rock.png" alt="rock" />
         </button>
         <button class="choice" id="Paper">
           Paper
-          <img id="Paper" src="./public/paper.png" alt="paper" />
+          <img id="Paper" src="/paper.png" alt="paper" />
         </button>
         <button class="choice" id="Scissors">
           Scissors
-          <img id="Scissors" src="./public/scissors.png" alt="scissors" />
+          <img id="Scissors" src="/scissors.png" alt="scissors" />
         </button>
       </div>
     </section>
