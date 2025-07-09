@@ -1,4 +1,4 @@
-# QR Code Generator
+# Rock Paper Scissors
 
 Enjoy a quick game or five of rock paper scissors!
 

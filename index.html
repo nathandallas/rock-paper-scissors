@@ -5,16 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
       <h1>Rock Paper Scissors</h1>
     </header>
 
-    <section id="stats">
+    <section id="stats" class="stats-container">
       <h4 class="rounds">Round 1</h4>
       <div class="stats">
         <div class="player">
@@ -22,16 +22,16 @@
           <h3 class="player--choice">?</h3>
         </div>
         <div class="ratio">
-          <h3 id="player-score" class="mobile">0</h3>
-          <h3>:</h3>
-          <h3 id="computer-score" class="mobile">0</h3>
+          <h3 id="player-score">0</h3>
+          <h3 class="tablet">:</h3>
+          <h3 id="computer-score">0</h3>
         </div>
-        <div class="player">
+        <div class="player computer">
           <h3 class="player--name">Computer</h3>
           <h3 class="computer--choice">?</h3>
         </div>
       </div>
-      <p>First to 5 Wins!</p>
+      <p class="tablet">First to 5 Wins!</p>
     </section>
 
     <section class="results">
@@ -40,7 +40,7 @@
     </section>
 
     <section id="choice">
-      <h2>Choose Your Weapon</h2>
+      <h2 class="tablet">Choose Your Weapon:</h2>
       <div class="choices">
         <button class="choice" id="Rock">
           Rock
