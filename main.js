@@ -1,4 +1,4 @@
-import "./style.scss";
+import "./style.css";
 
 // Variables
 const selection = document.querySelectorAll(".choice");
