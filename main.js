@@ -1,5 +1,3 @@
-import "./style.css";
-
 // Variables
 const selection = document.querySelectorAll(".choice");
 const replay = document.querySelector("#replay");

@@ -95,7 +95,7 @@ section {
   .rounds {
     position: absolute;
     width: 100vw;
-    top: 37rem;
+    top: 40rem;
   }
 }
 
@@ -120,7 +120,7 @@ section {
 @media screen and (max-width: 767px) {
   .player {
     position: absolute;
-    top: 30rem;
+    top: 35rem;
   }
 }
 .player--name {
@@ -141,7 +141,7 @@ section {
   font-size: 4rem;
   margin: 3rem auto;
   position: absolute;
-  top: 30rem;
+  top: 35rem;
 }
 .ratio h3 {
   margin: 0 1.5rem;
@@ -179,8 +179,8 @@ section {
   font-weight: 600;
   background-color: rgba(100, 108, 255, 0.3764705882);
   border: 2px solid #646cff;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   margin: 0.5rem auto;
   border-radius: 2rem;
 }
@@ -245,7 +245,7 @@ img {
   .results {
     position: absolute;
     width: 100vw;
-    top: 40rem;
+    top: 44rem;
     padding-bottom: 1rem;
   }
 }
@@ -258,6 +258,7 @@ footer {
 @media screen and (min-width: 768px) {
   footer {
     display: block;
+    padding: 2rem;
   }
 }
 

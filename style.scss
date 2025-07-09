@@ -113,7 +113,7 @@ section {
   @include phone {
     position: absolute;
     width: 100vw;
-    top: 37rem;
+    top: 40rem;
   }
 }
 
@@ -135,7 +135,7 @@ section {
   min-width: 150px;
   @include phone {
     position: absolute;
-    top: 30rem;
+    top: 35rem;
   }
   &--name {
     font-size: 1.5rem;
@@ -156,7 +156,7 @@ section {
   font-size: 4rem;
   margin: 3rem auto;
   position: absolute;
-  top: 30rem;
+  top: 35rem;
 
   & h3 {
     margin: 0 1.5rem;
@@ -190,8 +190,8 @@ section {
     font-weight: 600;
     background-color: #646cff60;
     border: 2px solid #646cff;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     margin: 0.5rem auto;
     border-radius: 2rem;
     @include tablet {
@@ -252,7 +252,7 @@ img {
     position: absolute;
 
     width: 100vw;
-    top: 40rem;
+    top: 44rem;
     padding-bottom: 1rem;
   }
 }
@@ -263,6 +263,7 @@ footer {
   margin: 0 auto;
   @include tablet {
     display: block;
+    padding: 2rem;
   }
 }
 
